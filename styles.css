@@ -2,37 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #0d0d0d; /* Fondo más oscuro */
+    color: #e0e0e0; /* Texto claro */
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #222; /* Color del encabezado más oscuro */
     color: #fff;
     padding: 10px 20px;
+}
+.logo-abp {
+    display: inline-block;
+    transition: transform 0.3s, color 0.3s; /* Transición para la animación */
+}
+.logo-abp:hover {
+    transform: scale(1.2); /* Aumentar tamaño */
+    color: #ffcc00; /* Cambiar color al pasar el ratón */
 }
 nav {
     display: flex;
     gap: 15px;
 }
-nav button {
-    background: #fff;
-    color: #333;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background 0.3s;
+nav a {
+    color: #e0e0e0; /* Texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px; /* Espaciado interno */
+    transition: background 0.3s, color 0.3s, transform 0.3s; /* Transición suave */
 }
-nav button:hover {
-    background: #ddd;
+nav a:hover {
+    background: #444; /* Color al pasar el ratón */
+    color: #fff; /* Color de texto al pasar el ratón */
+    transform: scale(1.05); /* Efecto de aumento */
 }
 section {
     padding: 20px;
     max-width: 800px;
     margin: auto;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #1a1a1a; /* Fondo de sección oscuro */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
     display: flex;
     gap: 20px;
@@ -41,7 +50,7 @@ section {
     width: 150px;
     height: 150px;
     border-radius: 75px;
-    background-color: #ccc;
+    background-color: #555; /* Fondo de perfil */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,12 +61,17 @@ section {
 }
 .service, .skill, .experience {
     flex: 1;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #333; /* Fondo de servicio/habilidad */
+    border: 1px solid #444; /* Borde de servicio/habilidad */
     border-radius: 5px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, background-color 0.3s; /* Transición para la animación */
+}
+.service:hover, .skill:hover, .experience:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+    background-color: #444; /* Cambiar color de fondo al pasar el ratón */
 }
 .fade-in {
     opacity: 0;
@@ -74,7 +88,7 @@ section {
 .logo {
     width: 40px;
     height: 40px;
-    background-color: #333;
+    background-color: #444; /* Fondo de logotipo */
     color: #fff;
     display: flex;
     justify-content: center;
@@ -99,13 +113,15 @@ section {
 }
 .contact-form input, .contact-form textarea {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Borde de formulario */
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
+    background-color: #333; /* Fondo de formulario */
+    color: #fff; /* Texto de formulario */
 }
 .contact-form button {
-    background-color: #333;
+    background-color: #555; /* Fondo de botón de formulario */
     color: #fff;
     border: none;
     padding: 10px;
@@ -113,12 +129,12 @@ section {
     transition: background 0.3s;
 }
 .contact-form button:hover {
-    background-color: #555;
+    background-color: #666; /* Color al pasar el ratón en botón de formulario */
 }
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #222; /* Fondo del pie de página */
     color: #fff;
     position: relative;
 }
